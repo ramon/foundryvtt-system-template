@@ -32,12 +32,12 @@ gulp.task("copyFiles", async () => {
 
 gulp.task("build", gulp.parallel("buildTS", "buildLESS", "copyFiles"));
 
-gulp.task("watch", () => {
-    gulp.watch('src/**/*.ts', { ignoreInitial: false }, "buildTS");
-    gulp.watch('src/**/*.less', { ignoreInitial: false }, "buildLESS");
+gulp.task("build:watch", () => {
+    gulp.watch('src/**/*.ts', { ignoreInitial: false }, gulp.series("buildTS"));
+    gulp.watch('src/**/*.less', { ignoreInitial: false }, gulp.series("buildLESS"));
     gulp.watch(
         ['src/assets', 'src/lang', 'src/templates', 'src/*.json'],
         { ignoreInitial: false },
-        "copyFiles"
-    );
+        gulp.series("copyFiles")
+    )
 })

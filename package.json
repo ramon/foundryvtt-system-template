@@ -9,7 +9,7 @@
   "private": false,
   "scripts": {
     "build": "gulp build",
-    "watch": "gulp watch"
+    "watch": "gulp build:watch"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.5",

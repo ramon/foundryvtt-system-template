@@ -64,8 +64,8 @@ gulp.task("copyFiles", function () { return __awaiter(_this, void 0, void 0, fun
     });
 }); });
 gulp.task("build", gulp.parallel("buildTS", "buildLESS", "copyFiles"));
-gulp.task("watch", function () {
-    gulp.watch('src/**/*.ts', { ignoreInitial: false }, "buildTS");
-    gulp.watch('src/**/*.less', { ignoreInitial: false }, "buildLESS");
-    gulp.watch(['src/assets', 'src/lang', 'src/templates', 'src/*.json'], { ignoreInitial: false }, "copyFiles");
+gulp.task("build:watch", function () {
+    gulp.watch('src/**/*.ts', { ignoreInitial: false }, gulp.series("buildTS"));
+    gulp.watch('src/**/*.less', { ignoreInitial: false }, gulp.series("buildLESS"));
+    gulp.watch(['src/assets', 'src/lang', 'src/templates', 'src/*.json'], { ignoreInitial: false }, gulp.series("copyFiles"));
 });
