@@ -1,0 +1,3 @@
+# FoundryVTT System Template
+
+More info soon...
