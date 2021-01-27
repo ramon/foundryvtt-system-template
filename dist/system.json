@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "title": "",
+  "description": "",
+  "version": "0.1.0",
+  "authors": [{
+    "name": "ramon"
+  }],
+  "esmodules": ["system.js"],
+  "styles": ["system.css"],
+  "scripts": [],
+  "languages": [{
+    "lang": "en",
+    "name": "English",
+    "path": "lang/en.json"
+  }],
+  "packs": [],
+  "socket": true,
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "url": "",
+  "license": "LICENSE"
+}
